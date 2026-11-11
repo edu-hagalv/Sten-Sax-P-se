@@ -1,2 +1,2 @@
 # Sten-Sax-P-se
-Gruppprojekt lätt nivå
+Gruppprojekt, lätt nivå
