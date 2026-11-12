@@ -5,10 +5,12 @@ print("Nu ska vi spela Sten, Sax eller Påse,\nJag är Python.exe")
 namn_1=input("Ange ditt Användarnamn: ") # Denna linje ska be om användarnan och je möjligheten att skriva in det.
 namn_2="Python.exe"
 antal_omgångar=int(input("Ange antal omgångar: ")) # Denna linje ska be om antalet omgångar.
-val=input("Välj Sten, Sax eller Påse:""\n")
-omgångar=1
-alternativ = rand.choice(choices)
-for omgångar in range(antal_omgångar):
+
+for omgångar in range(1, antal_omgångar):
+    print(f"runda {antal_omgångar}:\n-------------------------")
+    val=input("Välj Sten, Sax eller Påse:")
+    alternativ = rand.choice(choices)
+    omgångar+=1
     
     if val == alternativ:
         print(f"Båda valde {val}")
