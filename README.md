@@ -1,5 +1,6 @@
 # Sten-Sax-P-se
 Gruppprojekt, lätt nivå
+
 Log 1:
 Jag skapade ett Repo och påbörjade programeringen för Sten, sax, påse.
 
