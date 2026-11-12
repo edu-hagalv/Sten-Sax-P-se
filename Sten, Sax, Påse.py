@@ -5,6 +5,7 @@ print("Nu ska vi spela Sten, Sax eller Påse,\nJag är Python.exe")
 namn_1=input("Ange ditt Användarnamn: ") # Denna linje ska be om användarnan och je möjligheten att skriva in det.
 namn_2="Python.exe"
 antal_omgångar=int(input("Ange antal omgångar: ")) # Denna linje ska be om antalet omgångar.
+omgångar=0
 
 for omgångar in range(1, antal_omgångar):
     print(f"runda {omgångar}:\n-------------------------")
@@ -15,11 +16,11 @@ for omgångar in range(1, antal_omgångar):
     if val == alternativ:
         print(f"Båda valde {val}")
         print("Oavgjort")
-        continue
+        
     elif val=="sten" and alternativ!="papper":
         print("Sten slår sax")
         print(f"{namn_1} vinner rundan")
-        continue
+        
     elif val=="papper" and alternativ!="sax":
         print("papper slår sten")
         print(f"{namn_1} vinner rundan")
