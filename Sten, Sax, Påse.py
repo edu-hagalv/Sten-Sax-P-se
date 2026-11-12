@@ -7,7 +7,7 @@ namn_2="Python.exe"
 antal_omgångar=int(input("Ange antal omgångar: ")) # Denna linje ska be om antalet omgångar.
 
 for omgångar in range(1, antal_omgångar):
-    print(f"runda {antal_omgångar}:\n-------------------------")
+    print(f"runda {omgångar}:\n-------------------------")
     val=input("Välj Sten, Sax eller Påse:")
     alternativ = rand.choice(choices)
     omgångar+=1
@@ -15,37 +15,30 @@ for omgångar in range(1, antal_omgångar):
     if val == alternativ:
         print(f"Båda valde {val}")
         print("Oavgjort")
-        break
-        
+        continue
     elif val=="sten" and alternativ!="papper":
         print("Sten slår sax")
         print(f"{namn_1} vinner rundan")
-        break
-    
+        continue
     elif val=="papper" and alternativ!="sax":
         print("papper slår sten")
         print(f"{namn_1} vinner rundan")
-        break
     
     elif val=="sax" and alternativ!="sten":
         print("Sax slår papper")
         print(f"{namn_1} vinner rundan")
-        break
     
     elif alternativ=="sten" and val=="papper":
         print("sten slår sax")
         print(f"{namn_2} vinner rundan")
-        break
     
     elif alternativ=="papper" and val=="sax":
         print("papper slår sten")
         print(f"{namn_2} vinner rundan")
-        break
     
     elif alternativ=="sax" and val=="sten":
         print("sax slår papper")
         print(f"{namn_2} vinner rundan")
-        break
     
     else:
         print("Ogiltig input!")
