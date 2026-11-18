@@ -3,11 +3,13 @@ choices = ["sten", "sax", "påse"]
 print("Nu ska vi spela Sten, Sax eller Påse,\nJag är Python.exe")
 
 namn_1=input("Ange ditt Användarnamn: ") # Denna linje ska be om användarnan och je möjligheten att skriva in det.
-namn_2="Python.exe"
+namn_exe="Python.exe"
 antal_omgångar=int(input("Ange antal omgångar: ")) # Denna linje ska be om antalet omgångar.
 omgångar=0
+poäng_1=0
+poäng_exe=0
 
-for omgångar in range(1, antal_omgångar):
+for omgångar in range(1, antal_omgångar+1):
     print(f"runda {omgångar}:\n-------------------------")
     val=input("Välj Sten, Sax eller Påse:")
     alternativ = rand.choice(choices)
@@ -15,32 +17,58 @@ for omgångar in range(1, antal_omgångar):
     
     if val == alternativ:
         print(f"Båda valde {val}")
-        print("Oavgjort")
+        print("Oavgjort\n")
+        print("ingen får poäng\n")
         
-    elif val=="sten" and alternativ!="papper":
+    elif val=="sten" and alternativ=="sax":
         print("Sten slår sax")
-        print(f"{namn_1} vinner rundan")
+        print(f"{alternativ}")
+        print(f"{namn_1} vinner rundan\n")
+        poäng_1+=1
+        print(f"{namn_1} har {poäng_1} poäng\n")
         
-    elif val=="papper" and alternativ!="sax":
-        print("papper slår sten")
-        print(f"{namn_1} vinner rundan")
+    elif val=="påse" and alternativ=="sten":
+        print("påse slår sten")
+        print(f"{namn_1} vinner rundan\n")
+        poäng_1+=1
+        print(f"{namn_1} har {poäng_1} poäng\n")
+        
+    elif val=="sax" and alternativ=="påse":
+        print("Sax slår påse")
+        print(f"{namn_1} vinner rundan\n")
+        poäng_1+=1
+        print(f"{namn_1} har {poäng_1} poäng\n")
     
-    elif val=="sax" and alternativ!="sten":
-        print("Sax slår papper")
-        print(f"{namn_1} vinner rundan")
-    
-    elif alternativ=="sten" and val=="papper":
+    elif alternativ=="sten" and val=="sax":
         print("sten slår sax")
-        print(f"{namn_2} vinner rundan")
+        print(f"{namn_exe} vinner rundan\n")
+        poäng_exe+=1
+        print(f"{namn_exe} har {poäng_exe} poäng\n")
     
-    elif alternativ=="papper" and val=="sax":
-        print("papper slår sten")
-        print(f"{namn_2} vinner rundan")
+    elif alternativ=="påse" and val=="sten":
+        print("påse slår sten")
+        print(f"{namn_exe} vinner rundan\n")
+        poäng_exe+=1
+        print(f"{namn_exe} har {poäng_exe} poäng\n")
     
-    elif alternativ=="sax" and val=="sten":
-        print("sax slår papper")
-        print(f"{namn_2} vinner rundan")
+    elif alternativ=="sax" and val=="påse":
+        print("sax slår påse")
+        print(f"{namn_exe} vinner rundan\n")
+        poäng_exe+=1
+        print(f"{namn_exe} har{poäng_exe} poäng\n")
     
-    else:
-        print("Ogiltig input!")
+    elif val!= choices:
+        print("Ogiltig input! Försök igen\n")
+        antal_omgångar
+    continue
+
+if poäng_1==poäng_exe:
+    print(f"Matchen blev lika då båda fick {poäng_1} poäng")
         
+elif poäng_1>poäng_exe:
+    print(f"{namn_1} leder och har {poäng_1} antal poäng och vinner matchen, Grattis!")
+        
+elif poäng_1<poäng_exe:
+    print(f"{namn.exe} leder och har {poäng.exe} antal poäng och vinner matchen, Grattis!")
+    
+
