@@ -9,5 +9,5 @@ Jag har nu nästan blivit klar med koden för Sten, sax, påse. Jag måste bara 
 då dem inte fungerar ännu.
 
 Log 3:
-Nu är jag klar med Sten, sax eller påse och resten av min grupp har på börjat
+Nu är jag klar med Sten, sax eller påse och resten av min grupp har påbörjat
 ordgissningsspelet.
