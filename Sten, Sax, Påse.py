@@ -10,7 +10,7 @@ poäng_1=0
 poäng_exe=0
 
 for omgångar in range(1, antal_omgångar+1):
-    print(f"runda {omgångar}:\n-------------------------")
+    print(f"runda {omgångar}:\n-------------------------------")
     val=input("Välj Sten, Sax eller Påse:")
     alternativ = rand.choice(choices)
     omgångar+=1
@@ -59,16 +59,17 @@ for omgångar in range(1, antal_omgångar+1):
     
     elif val!= choices:
         print("Ogiltig input! Försök igen\n")
-        antal_omgångar
-    continue
-
-if poäng_1==poäng_exe:
-    print(f"Matchen blev lika då båda fick {poäng_1} poäng")
         
-elif poäng_1>poäng_exe:
-    print(f"{namn_1} leder och har {poäng_1} antal poäng och vinner matchen, Grattis!")
-        
-elif poäng_1<poäng_exe:
-    print(f"{namn.exe} leder och har {poäng.exe} antal poäng och vinner matchen, Grattis!")
     
 
+if poäng_1==poäng_exe:
+    print(f"Resultat\n--------------\n{namn_1}: {poäng_1}\n{namn_exe}: {poäng_exe}\n")
+    print(f"Matchen blev lika då båda fick {poäng_1} poäng, nästan där")
+        
+elif poäng_1>poäng_exe:
+    print(f"Resultat\n--------------\n{namn_1}: {poäng_1}\n{namn_exe}: {poäng_exe}\n")
+    print(f"{namn_1} har {poäng_1} poäng och vinner matchen, Grattis!")
+        
+elif poäng_1<poäng_exe:
+    print(f"Resultat\n--------------\n{namn_1}: {poäng_1}\n{namn_exe}: {poäng_exe}\n")
+    print(f"{namn_exe} har {poäng_exe} poäng och vinner matchen, :( Bättre lycka nästa gång.")
