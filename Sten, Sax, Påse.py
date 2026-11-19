@@ -4,10 +4,18 @@ print("Nu ska vi spela Sten, Sax eller Påse,\nJag är Python.exe")
 
 namn_1=input("Ange ditt Användarnamn: ") # Denna linje ska be om användarnan och je möjligheten att skriva in det.
 namn_exe="Python.exe"
-antal_omgångar=int(input("Ange antal omgångar: ")) # Denna linje ska be om antalet omgångar.
+while True:
+    antal_omgångar=(input("Ange antal omgångar: "))
+    if not antal_omgångar.isdigit():
+        print("?\nSkriv ett nummer! INTE en bokstav!")
+        print("Försök igen")
+    else:
+        break
+
 omgångar=0
 poäng_1=0
 poäng_exe=0
+
 
 for omgångar in range(1, antal_omgångar+1):
     print(f"runda {omgångar}:\n-------------------------------")
@@ -62,7 +70,8 @@ for omgångar in range(1, antal_omgångar+1):
         print(f"{namn_exe} vinner rundan\n")
         poäng_exe+=1
         print(f"{namn_exe} har{poäng_exe} poäng\n")
-    
+
+
 
 if poäng_1==poäng_exe:
     print(f"Resultat\n--------------\n{namn_1}: {poäng_1}\n{namn_exe}: {poäng_exe}\n")
