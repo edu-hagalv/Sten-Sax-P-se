@@ -17,7 +17,7 @@ poäng_1=0
 poäng_exe=0
 
 
-for omgångar in range(1, antal_omgångar+1):
+for omgångar in range(1, int(antal_omgångar)+1):
     print(f"runda {omgångar}:\n-------------------------------")
     while True:
         val=input("Välj Sten, Sax eller Påse:")
