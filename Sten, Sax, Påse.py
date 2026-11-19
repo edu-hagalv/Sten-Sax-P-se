@@ -83,9 +83,6 @@ elif poäng_1>poäng_exe:
         
 elif poäng_1<poäng_exe:
     print(f"Resultat\n--------------\n{namn_1}: {poäng_1}\n{namn_exe}: {poäng_exe}\n")
-<<<<<<< Updated upstream
     print(f"{namn_exe} har {poäng_exe} poäng och vinner matchen, :( Bättre lycka nästa gång.")
-=======
     print(f"{namn_exe} har {poäng_exe} poäng och vinner matchen, :( Bättre lycka nästa gång.")
     
->>>>>>> Stashed changes
