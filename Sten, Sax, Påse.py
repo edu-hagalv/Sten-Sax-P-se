@@ -11,7 +11,13 @@ poäng_exe=0
 
 for omgångar in range(1, antal_omgångar+1):
     print(f"runda {omgångar}:\n-------------------------------")
-    val=input("Välj Sten, Sax eller Påse:")
+    while True:
+        val=input("Välj Sten, Sax eller Påse:")
+        if val in ["sten", "sax", "påse"]:
+            break
+        else:
+            print("Ogiltig input! Försök igen\n")
+            
     alternativ = rand.choice(choices)
     omgångar+=1
     
@@ -56,10 +62,6 @@ for omgångar in range(1, antal_omgångar+1):
         print(f"{namn_exe} vinner rundan\n")
         poäng_exe+=1
         print(f"{namn_exe} har{poäng_exe} poäng\n")
-    
-    elif val!= choices:
-        print("Ogiltig input! Försök igen\n")
-        
     
 
 if poäng_1==poäng_exe:
